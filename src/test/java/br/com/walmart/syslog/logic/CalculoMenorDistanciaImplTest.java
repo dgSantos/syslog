@@ -14,14 +14,15 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import br.com.walmart.syslog.business.MapaBO;
-import br.com.walmart.syslog.dao.MapaDAO;
-import br.com.walmart.syslog.dao.MapaDAOInterface;
-import br.com.walmart.syslog.dao.exception.MapaNotFoundException;
-import br.com.walmart.syslog.dao.model.MapaEntity;
-import br.com.walmart.syslog.logic.exception.CalculoMenorDistanciaException;
-import br.com.walmart.syslog.model.Caminho;
-import br.com.walmart.syslog.model.Mapa;
+import br.com.logic.exception.CalculoMenorDistanciaException;
+import br.com.syslog.business.MapaBO;
+import br.com.syslog.dao.MapaDAO;
+import br.com.syslog.dao.MapaDAOInterface;
+import br.com.syslog.dao.exception.MapaNotFoundException;
+import br.com.syslog.dao.model.MapaEntity;
+import br.com.syslog.logic.CalculoMenorDistancia;
+import br.com.syslog.model.Caminho;
+import br.com.syslog.model.Mapa;
 
 @RunWith(Arquillian.class)
 public class CalculoMenorDistanciaImplTest {

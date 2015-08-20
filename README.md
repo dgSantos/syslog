@@ -2,10 +2,7 @@ syslog
 ========================
 Author: Diego Santos
 Since: 19/08/2015
-Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV
-Summary: An example that incorporates multiple technologies
-Target Project: WildFly
-Source: <https://github.com/wildfly/quickstart/>
+Description: Solução para o problema de custo minimo.
 
 Tecnologia utilizadas
 ------------------------
