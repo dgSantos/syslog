@@ -4,7 +4,7 @@ Author: Diego Santos<br/>
 Since: 19/08/2015<br/>
 Description: Solução para o problema de custo minimo.<br/>
 
-Tecnologia utilizadas
+Tecnologias utilizadas
 ------------------------
 Java 7, JAX_RS, REST, JPA e CDI
 
