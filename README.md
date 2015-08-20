@@ -29,21 +29,22 @@ Principais vantagens na utilização:
   - Multiplataforma
   - Estabilidade
 
-A tecnologia REST foi adotada devido a sua simplicidade de uso, fácil integração com qualquer tipo de sistema pois o protocolo de comunicação é a base da web(HTTP)
+A tecnologia REST foi adotada devido a sua simplicidade de uso, fácil integração com qualquer tipo de sistema pois o protocolo de comunicação é a base da web (HTTP)
 Principais vantagens na utilização:
   - Integração
-  - Protocolo leve(HTTP)
+  - Protocolo leve (HTTP)
   - Caching Responses
   - Flexibilidade
   - Performance
   
-O Algoritmo de caminho minimo utilizado foi o de E. Dijkstra que dado um ponto de partida, que cálculo o custo para cada uma dos possíveis pontos de chegada.
-A implementação foi a mais simples possível dado o tempo curto e nao possui nenhuma otimização, como cache dos estimativas e melhorias de performance no algoritmo.
+O Algoritmo de caminho minimo utilizado foi o de E. Dijkstra que dado um ponto de partida, realiza um cálculo de custo para cada um dos possíveis pontos de chegada.
+A implementação foi a mais simples possível, dado o tempo curto para o desenvolvimento do projeto e nao possui nenhuma otimização como cache das estimativas e melhorias de performance no algoritmo.
+O algoritmo foi estruturado para facilitar a manutenção e possíveis otimizações.
 * nota: O algoritmo parte da premissa de que todos os pontos tem peso >= 0
 
 Para a camada de persistência foi utilizada a api JPA, oficial do Java EE(hibernate)
 Para efeito de testes o banco da aplicação utiliza o H2, banco de dados in memory.
-Para rodar em produção é necessário trocar a configuração do banco(syslog-ds.xml) para um banco relacional como SQL Server, Oracle ou DB2 para comportar a demanda e grandes quantidades de dados.
+Para rodar em produção é necessário trocar a configuração do banco facilmente, através do arquivo syslog-ds.xml, para um banco relacional como SQL Server, Oracle ou DB2 para comportar a demanda e grandes quantidades de dados.
 
 Referências
 ------------------------
@@ -67,11 +68,11 @@ Interfaces
 ------------------------
 O Sistema dispõe de suas interfaces, uma para cadastro e outra para obter o menor custo.
 
-<h1>Interface de input da malha logística:</h2>
+<h3>Interface de input da malha logística:</h3>
 
-Utilizar o verbo HTTP POST
-  - <host:8080>/syslog/malha
-    Exemplo: http://localhost:8080/syslog/malha
+Utilizar o verbo HTTP POST<br/>
+  - <host:8080>/syslog/malha<br/>
+    Exemplo: http://localhost:8080/syslog/malha<br/>
 
 Formato JSON aceito pelo serviço:
 
@@ -100,11 +101,11 @@ Exemplo:
 }
 ```
 
-<h2>Interface de calculo do menor custo:</h2>
+<h3>Interface de calculo do menor custo:</h3>
 
-Utilizar o verbo HTTP GET
-  -<host:8080>/syslog/custo?mapa=<nome_do_mapa>&origem=<origem>&destino=<destino>&autonomia=<autonomia_veiculo>&combustivel=<valor_combustivel>
-    Exemplo: http://localhost:8080/syslog/custo?mapa=SP&origem=A&destino=D&autonomia=10&combustivel=2.50
+Utilizar o verbo HTTP GET<br/>
+  - <host:8080>/syslog/custo?mapa=<nome_do_mapa>&origem=<origem>&destino=<destino>&autonomia=<autonomia_veiculo>&combustivel=<valor_combustivel><br/>
+    Exemplo: http://localhost:8080/syslog/custo?mapa=SP&origem=A&destino=D&autonomia=10&combustivel=2.50<br/>
 
 Formato JSON retornado pelo serviço:
 
