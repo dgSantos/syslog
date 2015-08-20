@@ -15,7 +15,8 @@ Sistema para calculo de custo minimo de malha logística desenvolvido na platafo
 O sistema conta com duas interfaces REST:
   - Uma interface para input dos dados de malha logistica através do formato JSON.
   - Uma interface REST para o serviço de calculo do custo mímino de entrega.  
-
+Para mais informações, veja a seção 'Interfaces'
+  
 O algoritmo de cálculo do menor caminho utilizado foi baseado na solução proposta por E. Dijkstra.
 
 Motivação
@@ -40,6 +41,10 @@ O Algoritmo de caminho minimo utilizado foi o de E. Dijkstra que dado um ponto d
 A implementação foi a mais simples possível dado o tempo curto e nao possui nenhuma otimização, como cache dos estimativas e melhorias de performance no algoritmo.
 * nota: O algoritmo parte da premissa de que todos os pontos tem peso >= 0
 
+Para a camada de persistência foi utilizada a api JPA, oficial do Java EE(hibernate)
+Para efeito de testes o banco da aplicação utiliza o H2, banco de dados in memory.
+Para rodar em produção é necessário trocar a configuração do banco(syslog-ds.xml) para um banco relacional como SQL Server, Oracle ou DB2 para comportar a demanda e grandes quantidades de dados.
+
 Referências
 ------------------------
 http://www.inf.ufsc.br/grafos/temas/custo-minimo/dijkstra.html<br/>
@@ -57,6 +62,72 @@ Instalação e deploy da aplicação
 ```
 
 *É necessario que o servidor Wilfly esteja sendo executado e configurado na porta padrão 8080*
+
+Interfaces
+------------------------
+O Sistema dispõe de suas interfaces, uma para cadastro e outra para obter o menor custo.
+
+<h1>Interface de input da malha logística:</h2>
+
+Utilizar o verbo HTTP POST
+  - <host:8080>/syslog/malha
+    Exemplo: http://localhost:8080/syslog/malha
+
+Formato JSON aceito pelo serviço:
+
+```javascript
+{
+  "nome":"<nome_do_mapa>",
+  "malha":[
+    ["<origem>", "<destino>", "<distancia>"],
+    ...
+]
+}
+```
+
+Exemplo:
+
+```javascript
+{"nome":"SP",
+  "malha":[
+    ["A", "B", "10"],
+    ["B", "D", "15"],
+    ["A", "C", "20"],
+    ["C", "D", "30"],
+    ["B", "E", "50"],
+    ["D", "E", "30"]
+  ]
+}
+```
+
+<h2>Interface de calculo do menor custo:</h2>
+
+Utilizar o verbo HTTP GET
+  -<host:8080>/syslog/custo?mapa=<nome_do_mapa>&origem=<origem>&destino=<destino>&autonomia=<autonomia_veiculo>&combustivel=<valor_combustivel>
+    Exemplo: http://localhost:8080/syslog/custo?mapa=SP&origem=A&destino=D&autonomia=10&combustivel=2.50
+
+Formato JSON retornado pelo serviço:
+
+```javascript
+{
+  "rota": [
+      ...
+  ],
+  "custo": <valor>
+}```
+
+Exemplo:
+
+```javascript
+{
+  "rota": [
+      "A",
+      "B",
+      "D"
+  ],
+  "custo": 6.25
+}
+```
 
 Requisitos
 ------------------------
