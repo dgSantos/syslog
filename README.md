@@ -55,7 +55,7 @@ Instalação e deploy da aplicação
  > mvn wilfly:deploy
 ```
 
-*É necessario que o servidor Wilfly esteja sendo executado e configurado na porta padrão 8080*
+*É necessario que o servidor Wildfly esteja sendo executado e configurado na porta padrão 8080*
 
 Interfaces
 ------------------------
