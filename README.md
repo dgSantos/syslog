@@ -2,7 +2,7 @@ syslog
 ========================
 Author: Diego Santos<br/>
 Since: 19/08/2015<br/>
-Description: Solução para o problema de custo minimo.<br/>
+Description: Solução para o problema de custo mínimo.<br/>
 
 Tecnologias utilizadas
 ------------------------
@@ -10,7 +10,7 @@ Java 7, JAX-RS, REST, JPA e CDI
 
 Solução
 ------------------------
-Sistema para calculo de custo minimo de malha logística desenvolvido na plataforma Java EE 7.
+Sistema para cálculo de custo mínimo de malha logística desenvolvido na plataforma Java EE 7.
 
 O sistema conta com duas interfaces REST:
   - Uma interface para input dos dados de malha logistica através do formato JSON.
@@ -37,14 +37,14 @@ Principais vantagens na utilização:
   - Flexibilidade
   - Performance
   
-O Algoritmo de caminho minimo utilizado foi o de E. Dijkstra que dado um ponto de partida, realiza um cálculo de custo para cada um dos possíveis pontos de chegada.
+O Algoritmo de caminho mínimo utilizado foi o de E. Dijkstra que dado um ponto de partida, realiza um cálculo de custo para cada um dos possíveis pontos de chegada.
 A implementação foi a mais simples possível, dado o tempo curto para o desenvolvimento do projeto e nao possui nenhuma otimização como cache das estimativas e melhorias de performance no algoritmo.
 O algoritmo foi estruturado para facilitar a manutenção e possíveis otimizações.
 * nota: O algoritmo parte da premissa de que todos os pontos tem peso >= 0
 
 Para a camada de persistência foi utilizada a api JPA, oficial do Java EE(hibernate)
 Para efeito de testes o banco da aplicação utiliza o H2, banco de dados in memory.
-Para rodar em produção é necessário trocar a configuração do banco facilmente, através do arquivo syslog-ds.xml, para um banco relacional como SQL Server, Oracle ou DB2 para comportar a demanda e grandes quantidades de dados.
+Para rodar em produção é possível trocar a configuração do banco facilmente, através do arquivo syslog-ds.xml, para um banco relacional como SQL Server, Oracle ou DB2 para comportar a demanda e grandes quantidades de dados.
 
 Instalação e deploy da aplicação
 ------------------------
