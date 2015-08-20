@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.com.logic.exception;
+package br.com.syslog.logic.exception;
 
 /**
  * @author Diego Santos
