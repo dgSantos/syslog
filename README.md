@@ -115,7 +115,8 @@ Formato JSON retornado pelo serviço:
       ...
   ],
   "custo": <valor>
-}```
+}
+```
 
 Exemplo:
 
