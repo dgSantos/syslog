@@ -1,8 +1,8 @@
 syslog
 ========================
-Author: Diego Santos
-Since: 19/08/2015
-Description: Solução para o problema de custo minimo.
+Author: Diego Santos<br/>
+Since: 19/08/2015<br/>
+Description: Solução para o problema de custo minimo.<br/>
 
 Tecnologia utilizadas
 ------------------------
