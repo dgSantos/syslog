@@ -46,13 +46,6 @@ Para a camada de persistência foi utilizada a api JPA, oficial do Java EE(hiber
 Para efeito de testes o banco da aplicação utiliza o H2, banco de dados in memory.
 Para rodar em produção é necessário trocar a configuração do banco facilmente, através do arquivo syslog-ds.xml, para um banco relacional como SQL Server, Oracle ou DB2 para comportar a demanda e grandes quantidades de dados.
 
-Referências
-------------------------
-http://www.inf.ufsc.br/grafos/temas/custo-minimo/dijkstra.html<br/>
-http://algs4.cs.princeton.edu/home/<br/>
-https://docs.oracle.com/javaee/7/tutorial/<br/>
-
-  
 Instalação e deploy da aplicação
 ------------------------
 ```sh
@@ -136,6 +129,12 @@ Requisitos
  - Wildfly 8.0.0 final (porta padrão 8080)
  - Oracle Java SDK 7
  - Maven 3.2.x
+
+Referências
+------------------------
+http://www.inf.ufsc.br/grafos/temas/custo-minimo/dijkstra.html<br/>
+http://algs4.cs.princeton.edu/home/<br/>
+https://docs.oracle.com/javaee/7/tutorial/<br/>
 
 
   
