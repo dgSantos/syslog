@@ -42,19 +42,19 @@ A implementação foi a mais simples possível dado o tempo curto e nao possui n
 
 Referências
 ------------------------
-http://www.inf.ufsc.br/grafos/temas/custo-minimo/dijkstra.html
-http://algs4.cs.princeton.edu/home/
-https://docs.oracle.com/javaee/7/tutorial/
+http://www.inf.ufsc.br/grafos/temas/custo-minimo/dijkstra.html<br/>
+http://algs4.cs.princeton.edu/home/<br/>
+https://docs.oracle.com/javaee/7/tutorial/<br/>
 
   
 Instalação e deploy da aplicação
 ------------------------
-'''sh
+```sh
  > git clone https://github.com/dgSantos/syslog.git
  > cd syslog
  > mvn clean install
  > mvn wilfly:deploy
-'''
+```
 
 *É necessario que o servidor Wilfly esteja sendo executado e configurado na porta padrão 8080*
 
