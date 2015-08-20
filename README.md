@@ -68,7 +68,7 @@ Interfaces
 ------------------------
 O Sistema dispõe de suas interfaces, uma para cadastro e outra para obter o menor custo.
 
-<h3>Interface de input da malha logística:</h3>
+<h4>Interface de input da malha logística:</h4>
 
 Utilizar o verbo HTTP POST<br/>
   - <host:8080>/syslog/malha<br/>
@@ -101,7 +101,7 @@ Exemplo:
 }
 ```
 
-<h3>Interface de calculo do menor custo:</h3>
+<h4>Interface de calculo do menor custo:</h4>
 
 Utilizar o verbo HTTP GET<br/>
   - <host:8080>/syslog/custo?mapa=<nome_do_mapa>&origem=<origem>&destino=<destino>&autonomia=<autonomia_veiculo>&combustivel=<valor_combustivel><br/>
