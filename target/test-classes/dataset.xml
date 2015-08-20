@@ -1,0 +1,10 @@
+<dataset>
+  <mapa nome="SP">
+    <caminho origem="A" destino="B" distancia="10"></caminho>
+    <caminho origem="B" destino="D" distancia="15"></caminho>
+    <caminho origem="A" destino="C" distancia="20"></caminho>
+    <caminho origem="C" destino="D" distancia="30"></caminho>
+    <caminho origem="B" destino="E" distancia="50"></caminho>
+    <caminho origem="D" destino="E" distancia="30"></caminho>
+  </Mapa>
+</dataset>
