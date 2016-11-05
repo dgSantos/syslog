@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import br.com.logic.exception.CalculoMenorDistanciaException;
+import br.com.syslog.logic.exception.CalculoMenorDistanciaException;
 import br.com.syslog.model.Caminho;
 import br.com.syslog.model.Mapa;
 
