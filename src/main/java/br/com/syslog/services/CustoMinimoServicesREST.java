@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import br.com.logic.exception.CalculoMenorDistanciaException;
+import br.com.syslog.logic.exception.CalculoMenorDistanciaException;
 import br.com.syslog.business.MapaBO;
 import br.com.syslog.dao.exception.MapaNotFoundException;
 import br.com.syslog.logic.CalculoMenorDistancia;
